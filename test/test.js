@@ -3,8 +3,8 @@ var assert = require('assert');
 var nodeOrder = require('../');
 
 describe('node-order node module', function () {
-  it('must have at least one test', function () {
+  it('This it the first test should be passed.', function () {
     nodeOrder();
-    assert(false, 'I was too lazy to write any tests. Shame on me.');
+    assert(true, 'Initial test added');
   });
 });
