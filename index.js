@@ -1,4 +1,6 @@
 'use strict';
-module.exports = function (str) {
-  console.log(str || 'Rainbow');
+
+
+module.exports =  {
+  id: require('./lib/id')
 };
