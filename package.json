@@ -1,40 +1,42 @@
 {
   "name": "node-order",
-  "version": "0.0.1",
-  "description": "A node-based order interface for E-Business",
+  "version": "0.0.0",
+  "description": "node,order",
+  "homepage": "",
   "author": {
-    "name": "JSSDKCN",
+    "name": "calidion",
     "email": "calidion@gmail.com",
     "url": "blog.3gcnbeta.com"
   },
-  "repository": "JSSDKCN/node-order",
-  "license": "MIT",
   "files": [
-    "index.js"
+    "dist"
   ],
+  "main": "dist/index.js",
   "keywords": [
-    "node-order",
     "order",
-    "node",
-    "e-business"
+    "node"
   ],
-  "dependencies": {
-    "moment": "^2.10.6"
-  },
+  "repository": "https://github.com/node-e-business/node-order.git",
   "devDependencies": {
-    "browserify": "^9.0.3",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-jshint": "^0.11.0",
-    "grunt-contrib-nodeunit": "^0.4.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-mocha-cli": "^1.12.0",
-    "jshint-stylish": "^1.0.1",
-    "load-grunt-tasks": "^3.1.0",
-    "moment": "^2.10.6",
-    "time-grunt": "^1.1.0"
+    "gulp": "^3.6.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.9.0",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-coveralls": "^0.1.0",
+    "gulp-babel": "^5.1.0",
+    "del": "^2.0.2",
+    "babel-core": "^5.5.0",
+    "isparta": "^3.0.3"
   },
   "scripts": {
-    "test": "grunt",
-    "browser": "browserify index.js > browser.js"
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.10.6"
   }
 }
