@@ -45,4 +45,13 @@ describe('node-order', function() {
   it('should get status when event success', function() {
     assert.equal(nodeOrder.status.CREATED, nodeOrder.getStatus(nodeOrder.events.create, true));
   });
+
+  it('should get error status when event is not correct', function() {
+    assert.equal(nodeOrder.status.ERROR, nodeOrder.getStatus(nodeOrder.events.create + '1', true));
+  });
+  it('should transversal all event into status', function() {
+    for (var k in nodeOrder.events) {
+      assert.equal(true, nodeOrder.getStatus(nodeOrder.events[k], true) !== -1);
+    }
+  });
 });
